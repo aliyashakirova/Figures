@@ -1,6 +1,5 @@
 ﻿using FiguresCalculations;
 
-using static FiguresCalculations.Figure;
 double a = double.Parse(Console.ReadLine());
 
 double b = double.Parse(Console.ReadLine());
@@ -19,7 +18,7 @@ circle.Calculations(circle.Radius);
 
 
 
-Figure[] figures = new Figure[5] { rectangle, triangle, circle, triangle, rectangle };
+Figure[] figures = [ rectangle, triangle, circle, triangle, rectangle ];
 
 SumOfAllPerimeters(figures);
 
@@ -31,5 +30,5 @@ static void SumOfAllPerimeters(Figure[] figures)
     {
         perimall += figures[i].Perimeter;
     }
-    Console.WriteLine(perimall);
+    Console.WriteLine($"Sum of all perimeters is {perimall}");
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FiguresCalculations
 {
-    public abstract class Figure
+    public class Figure
     {
         public double Side1 { get; set; }
 
@@ -20,22 +20,16 @@ namespace FiguresCalculations
         double _s;
 
 
-        public virtual void AreaOfTheFigure()
+        public abstract class AreaOfTheFigure()
         {
-            Console.WriteLine("some basic Area calculation");
-            _p = 0;
         }
 
-        public virtual void PerimeterOfTheFigure()
+        public abstract class PerimeterOfTheFigure()
         {
-            Console.WriteLine("Some basic Perimeter calculation");
-            _s = 0;
         }
 
-        public virtual void Calculations()
+        public abstract class Calculations()
         {
-            AreaOfTheFigure();
-            PerimeterOfTheFigure();
         }
 
     }
